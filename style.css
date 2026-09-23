@@ -222,13 +222,31 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
   color: var(--ink);
 }
 
-.hero-role {
-  font-size: 1.25rem;
-  color: var(--ink);
-  font-weight: 500;
-  margin-bottom: 0.9em;
-  font-family: var(--font-display);
+.role-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 1.3em;
 }
+.role-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.3;
+}
+.role-dark { background: var(--primary); color: #fff; }
+.role-light {
+  background: var(--primary-tint);
+  color: var(--primary);
+  border: 1px solid #EFD3D5;
+  transition: background-color 0.15s ease;
+}
+.role-light:hover { background: #F2D6D8; text-decoration: underline; }
 
 .eyebrow-badge {
   display: inline-flex;
@@ -255,9 +273,9 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
   border-radius: 999px;
   font-size: 13.5px;
   font-weight: 500;
+  background: var(--primary);
+  color: #fff;
 }
-.tag-a { background: var(--primary); color: #fff; }
-.tag-b { background: var(--primary-tint); color: var(--primary); }
 
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
@@ -359,7 +377,8 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
 .timeline-dates { font-size: 12.5px; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
 .timeline-card h3 { font-size: 1.18rem; margin-bottom: 2px; }
 .timeline-org { color: var(--ink); font-weight: 500; margin-bottom: 6px; font-size: 0.95rem; }
-.timeline-detail { margin-bottom: 0; font-size: 0.95rem; }
+.timeline-detail { margin-bottom: 4px; font-size: 0.95rem; }
+.timeline-detail:last-child { margin-bottom: 0; }
 .timeline-detail strong { color: var(--ink); }
 
 /* ==========================================================================
