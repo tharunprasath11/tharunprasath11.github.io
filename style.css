@@ -447,8 +447,8 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
   display: flex;
   align-items: flex-start;
   gap: 18px;
-  background: var(--card-soft);
-  border: 1px solid #EFD3D5;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 26px 28px;
   margin-bottom: 18px;
@@ -465,6 +465,13 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
   justify-content: center;
   box-shadow: 0 6px 16px rgba(140, 31, 40, 0.18);
 }
+.inline-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-tint);
+  text-underline-offset: 2px;
+}
+.inline-link:hover { text-decoration-color: var(--primary); }
 .spotlight-eyebrow { font-size: 12.5px; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
 .spotlight-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
 .spotlight-card p { margin-bottom: 0.8em; color: var(--muted); font-size: 0.97rem; }
