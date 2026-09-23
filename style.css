@@ -239,14 +239,18 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
   text-decoration: none;
   line-height: 1.3;
 }
-.role-dark { background: var(--primary); color: #fff; }
-.role-light {
-  background: var(--primary-tint);
+.role-dark {
+  background: transparent;
+  border: 1.5px solid var(--primary);
   color: var(--primary);
-  border: 1px solid #EFD3D5;
+}
+.role-light {
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
   transition: background-color 0.15s ease;
 }
-.role-light:hover { background: #F2D6D8; text-decoration: underline; }
+.role-light:hover { background: var(--primary-tint); text-decoration: underline; }
 
 .eyebrow-badge {
   display: inline-flex;
