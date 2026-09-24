@@ -312,22 +312,40 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
 .hero-art { display: flex; justify-content: center; }
 .scan-svg { width: 100%; max-width: 370px; height: auto; }
 
-.scanpath { stroke-dashoffset: 0; animation: draw 2.4s ease-out 0.2s both; }
-@keyframes draw {
-  from { stroke-dashoffset: 260; opacity: 0; }
-  to { stroke-dashoffset: 0; opacity: 1; }
+.scanpath {
+  stroke-dasharray: 6 7;
+  stroke-dashoffset: 0;
+  animation: scanMove 3s linear infinite;
 }
-.fixations circle { animation: pop 0.4s ease-out both; transform-origin: center; }
-.fixations circle:nth-child(1) { animation-delay: 0.3s; }
-.fixations circle:nth-child(2) { animation-delay: 0.6s; }
-.fixations circle:nth-child(3) { animation-delay: 0.9s; }
-.fixations circle:nth-child(4) { animation-delay: 1.2s; }
-.fixations circle:nth-child(5) { animation-delay: 1.5s; }
-.fixations circle:nth-child(6) { animation-delay: 1.8s; }
-.fixations circle:nth-child(7) { animation-delay: 2.1s; }
-@keyframes pop {
-  from { transform: scale(0); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+
+@keyframes scanMove {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -52; }
+}
+
+.fixations circle {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: fixationPulse 1.8s ease-in-out infinite;
+}
+
+.fixations circle:nth-child(1) { animation-delay: 0s; }
+.fixations circle:nth-child(2) { animation-delay: 0.25s; }
+.fixations circle:nth-child(3) { animation-delay: 0.5s; }
+.fixations circle:nth-child(4) { animation-delay: 0.75s; }
+.fixations circle:nth-child(5) { animation-delay: 1s; }
+.fixations circle:nth-child(6) { animation-delay: 1.25s; }
+.fixations circle:nth-child(7) { animation-delay: 1.5s; }
+
+@keyframes fixationPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
 }
 
 /* ==========================================================================
