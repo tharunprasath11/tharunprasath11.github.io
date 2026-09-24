@@ -598,13 +598,11 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
 }
 
 .gallery-tile {
-  border: 2px dashed #E7C3C5;
   border-radius: var(--radius-lg);
-  background: var(--primary-tint);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
+  overflow: hidden;
 }
 
 .gallery-tile img {
