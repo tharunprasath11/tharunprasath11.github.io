@@ -637,6 +637,26 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+.hero-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-art > img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+}
+
+.hero-art .scan-svg {
+  width: 260px;
+  height: 260px;
+}
+
 @media (max-width: 760px) {
   .tab-nav {
     display: none;
