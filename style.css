@@ -670,7 +670,7 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
 
 .hero-art > img {
   width: 240px;
-  height: 300px;
+  height: 360px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   border: 2px solid var(--border);
