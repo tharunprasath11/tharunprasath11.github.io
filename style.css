@@ -645,16 +645,16 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
 }
 
 .hero-art > img {
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 300px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   border: 2px solid var(--border);
 }
 
 .hero-art .scan-svg {
-  width: 260px;
-  height: 260px;
+  width: 320px;
+  height: 320px;
 }
 
 @media (max-width: 760px) {
