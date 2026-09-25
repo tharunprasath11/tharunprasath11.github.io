@@ -606,8 +606,7 @@ code { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; }
 }
 
 .gallery-tile img {
-  max-width: 100%;
-  width: auto;
+  width: 70%;
   height: auto;
   display: block;
   margin: 0 auto;
